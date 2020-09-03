@@ -1,0 +1,66 @@
+:root {
+    
+    --header-height: 100px;
+    --nav-height: 50px;
+    --greenColor: rgb(66, 216, 46);
+        
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--greenColor);
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+}
+
+
+
+
+/* Layout em Grid */
+
+.app {
+    
+    display: grid;
+    grid-template-rows:
+        var(--nav-height)
+        var(--header-height)
+        1fr;
+    grid-template-areas:
+        "menu"
+        "header"
+        "content";
+    height: 100vh;
+    
+}
+
+
+nav {
+
+    display: flex;
+    grid-area: menu;
+    border: var(--greenColor) 1px solid;
+    
+}
+
+
+header {
+    grid-area: header;
+}
+
+
+.main {
+    grid-area: content;
+}
+
+
+.menu a {
+    color: var(--greenColor);
+    text-decoration: none;
+    font-weight: 300;
+    padding: 15px;
+}
+
+.menu a:hover {
+    color: bisque;
+}
+
